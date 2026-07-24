@@ -1,6 +1,7 @@
 package me.topishere.anticheat.paper.checks;
 
 import me.topishere.anticheat.common.ViolationRecord;
+import org.bukkit.GameMode;
 import org.bukkit.entity.Player;
 
 public abstract class Check {
@@ -17,6 +18,7 @@ public abstract class Check {
     public abstract ViolationRecord check(Player player, PlayerCheckData data);
 
     public boolean shouldCheck(Player player) {
-        return !player.isOp() && player.getGameMode().isAlive();
+        // Skip checks for ops and creative/spectator modes
+        return !player.isOp() && player.getGameMode() != GameMode.CREATIVE && player.getGameMode() != GameMode.SPECTATOR;
     }
 }
