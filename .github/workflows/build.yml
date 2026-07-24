@@ -27,7 +27,7 @@ jobs:
       run: mvn test
 
     - name: Upload Paper Plugin Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: anticheat-paper-plugin
@@ -35,7 +35,7 @@ jobs:
         retention-days: 30
 
     - name: Upload Velocity Plugin Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: anticheat-velocity-plugin
@@ -43,7 +43,7 @@ jobs:
         retention-days: 30
 
     - name: Upload Common Library
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: anticheat-common-lib
