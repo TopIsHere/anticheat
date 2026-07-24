@@ -1,0 +1,15 @@
+name: TopIsHereAnticheat
+version: 1.0.0
+description: Advanced anticheat system for Paper
+author: TopIsHere
+main: me.topishere.anticheat.paper.AnticheatPlugin
+api-version: 1.21
+
+commands:
+  anticheat:
+    description: Anticheat management commands
+    usage: /anticheat <subcommand>
+    aliases: [ac]
+  acheck:
+    description: Check a player
+    usage: /acheck <player>
